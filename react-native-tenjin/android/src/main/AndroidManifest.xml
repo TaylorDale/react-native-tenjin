@@ -2,5 +2,10 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.reactlibrary">
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required to get network connectivity (i.e. wifi vs. mobile) -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <meta-data
+        android:name="TENJIN_APP_STORE"
+        android:value="googleplay" />
 </manifest>
