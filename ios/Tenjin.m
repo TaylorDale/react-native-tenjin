@@ -13,7 +13,7 @@ RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnu
     callback(@[[NSString stringWithFormat: @"numberArgument: %@ stringArgument: %@", numberArgument, stringArgument]]);
 }
 
-RCT_EXPORT_METHOD(initTenjin:(NSString *)apiKey gdprParam:(nonnull BOOL)gdpr testModeParam:(nonnull BOOL)testMode callback:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(initTenjin:(NSString *)apiKey gdprParam:(BOOL)gdpr testModeParam:(BOOL)testMode callback:(RCTResponseSenderBlock)callback)
 {
     [TenjinSDK initialize:apiKey];
     [TenjinSDK registerAppForAdNetworkAttribution];
@@ -25,7 +25,7 @@ RCT_EXPORT_METHOD(initTenjin:(NSString *)apiKey gdprParam:(nonnull BOOL)gdpr tes
     }
     
     [TenjinSDK connect];
-    callback();
+    callback(@[]);
 }
 
 @end
